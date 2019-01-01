@@ -22,7 +22,7 @@ export default class Lesson extends HTMLElement {
         })
     }
     onExit() {
-        this.dispatchEvent(new CustomEvent("onlessonexit", { bubbles: true, detail: this.scores }))
+        this.dispatchEvent(new CustomEvent("onlessonexit", { bubbles: true, detail: { scores: this.scores } }))
     }
     onChooseLesson(event) {
         this.index = 0
